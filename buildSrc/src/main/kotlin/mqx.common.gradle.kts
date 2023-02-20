@@ -1,5 +1,5 @@
 plugins {
-    id("org.jetbrains.kotlin.jvm")
+    kotlin("jvm")
 }
 
 repositories {
@@ -8,12 +8,16 @@ repositories {
 
 dependencies {
     constraints {
-        implementation("org.apache.commons:commons-text:1.9")
-    }
 
+    }
+    testImplementation(kotlin("test"))
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.1")
 }
 
 tasks.named<Test>("test") {
     useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(17)
 }

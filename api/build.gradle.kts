@@ -1,5 +1,5 @@
 plugins {
-    id("mqx.kotlin-library-conventions")
+    id("mqx.lib")
 }
 
 dependencies {

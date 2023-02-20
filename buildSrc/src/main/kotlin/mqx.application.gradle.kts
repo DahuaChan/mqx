@@ -1,6 +1,6 @@
 import org.gradle.kotlin.dsl.application
 
 plugins {
-    id("mqx.kotlin-common-conventions")
+    id("mqx.common")
     application
 }

@@ -1,6 +1,6 @@
 import org.gradle.kotlin.dsl.`java-library`
 
 plugins {
-    id("mqx.kotlin-common-conventions")
+    id("mqx.common")
     `java-library`
 }
