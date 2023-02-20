@@ -1,6 +1,6 @@
 package xyz.dava.mqx.api
 
-public interface MessageQueue {
+interface MessageQueue {
     fun send(message: String)
 
     fun bindView()
