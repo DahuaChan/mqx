@@ -2,6 +2,7 @@ package xyz.dava.mqx
 
 import atlantafx.base.theme.PrimerDark
 import javafx.stage.Stage
+import org.scenicview.ScenicView
 import tornadofx.App
 import tornadofx.launch
 import xyz.dava.mqx.view.AppRootView
@@ -13,6 +14,8 @@ class MqxApp: App(AppRootView::class) {
         setUserAgentStylesheet(PrimerDark().userAgentStylesheet)
         // 调用父类启动
         super.start(stage)
+
+//        ScenicView.show(stage.scene)
     }
 }
 

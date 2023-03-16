@@ -1,5 +1,6 @@
 package xyz.dava.mqx.view
 
+import com.starsone.icontext.view.MainView
 import javafx.geometry.Pos
 import javafx.scene.control.TabPane
 import javafx.scene.layout.Priority
@@ -14,11 +15,10 @@ import xyz.dava.mqx.view.mq.RabbitMqView
  * @constructor 创建[AppRootView]
  */
 class AppRootView : View() {
+
     override val root =
         stackpane {
-            minWidth = 700.0
-            minHeight = 450.0
-
+            setPrefSize(800.0, 600.0)
             tabpane {
                 tabClosingPolicy = TabPane.TabClosingPolicy.UNAVAILABLE
                 tab<ActiveMqView>()
