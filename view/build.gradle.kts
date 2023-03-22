@@ -3,7 +3,7 @@ plugins {
     id("mqx.view")
 }
 dependencies {
+    implementation(project(":mq:active"))
     implementation(project(":mq:rabbit"))
     api(files("libs/scenicview.jar"))
-    implementation("com.github.Stars-One:IconTextFx:1.2")
 }

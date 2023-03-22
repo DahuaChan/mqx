@@ -1,4 +1,4 @@
-package xyz.dava.mqx.view.mq
+package xyz.dava.mqx.mq.active.view
 
 import com.starsone.icontext.icontext
 import javafx.beans.property.SimpleStringProperty
@@ -9,6 +9,7 @@ import javafx.scene.control.SelectionMode
 import javafx.scene.layout.Priority
 import javafx.scene.paint.Color
 import tornadofx.*
+import xyz.dava.mqx.mq.active.view.dialog.SettingDialog
 
 class ActiveMqView : View("Active") {
 
@@ -16,6 +17,7 @@ class ActiveMqView : View("Active") {
     private val host = FXCollections.observableArrayList("127.0.0.1:8080")
     private val queueMessage = mutableListOf<String>().asObservable()
     private val selectedMessage = SimpleStringProperty()
+    val settingDialog :SettingDialog by inject()
 
 
     override val root = borderpane {
@@ -34,6 +36,9 @@ class ActiveMqView : View("Active") {
                     }
                     button(graphic = icontext("cog") { fill = iconColor }) {
                         tooltip("修改连接信息")
+                        action {
+                            settingDialog.openModal()
+                        }
                     }
                 }
                 hbox(10, Pos.CENTER_LEFT) {

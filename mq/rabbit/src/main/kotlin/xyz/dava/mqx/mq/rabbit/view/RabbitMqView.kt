@@ -1,4 +1,4 @@
-package xyz.dava.mqx.view.mq
+package xyz.dava.mqx.mq.rabbit.view
 
 import javafx.collections.FXCollections
 import tornadofx.*
