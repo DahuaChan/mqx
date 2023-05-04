@@ -17,11 +17,11 @@ class ActiveMqView : View("Active") {
     private val host = FXCollections.observableArrayList("127.0.0.1:8080")
     private val queueMessage = mutableListOf<String>().asObservable()
     private val selectedMessage = SimpleStringProperty()
-    val settingDialog :SettingDialog by inject()
+    private val settingDialog :SettingDialog by inject()
 
 
     override val root = borderpane {
-        padding = Insets(5.0)
+        paddingAll = 5.0
         top {
             vbox(10, Pos.CENTER) {
                 hbox(10, Pos.CENTER_LEFT) {
