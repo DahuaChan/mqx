@@ -9,18 +9,25 @@ plugins {
 group = "xyz.dava.tool"
 version = "1.0-SNAPSHOT"
 
+extra.set("jewel.version", "0.19.6")
+
+
 repositories {
+    mavenLocal()
     mavenCentral()
+    maven("https://packages.jetbrains.team/maven/p/kpm/public/")
     maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     google()
 }
 
+
 dependencies {
-    // Note, if you develop a library, you should use compose.desktop.common.
-    // compose.desktop.currentOs should be used in launcher-sourceSet
-    // (in a separate module for demo project and in testMain).
-    // With compose.desktop.common you will also lose @Preview functionality
-    implementation(compose.desktop.currentOs)
+    implementation(libs.kotlin.reflect)
+    implementation(compose.desktop.currentOs) {
+        exclude(group = "org.jetbrains.compose.material")
+    }
+    implementation(libs.jewelStandalone)
+    implementation(libs.jewelDecoratedWindow)
 }
 
 compose.desktop {

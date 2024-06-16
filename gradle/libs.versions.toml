@@ -1,0 +1,10 @@
+[versions]
+jewel = "0.19.6"
+kotlin = "2.0.0"
+
+[libraries]
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+#kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerialization" }
+
+jewelStandalone = { module = "org.jetbrains.jewel:jewel-int-ui-standalone-241", version.ref = "jewel" }
+jewelDecoratedWindow = { module = "org.jetbrains.jewel:jewel-int-ui-decorated-window-241", version.ref = "jewel" }
