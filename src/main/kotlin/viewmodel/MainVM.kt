@@ -6,7 +6,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import model.ViewInfo
-import view.AppView
+import view.mq.MqView
 import view.setting.SettingView
 
 object MainVM {
@@ -21,9 +21,7 @@ object MainVM {
             } else {
                 Color(0xFF654B40)
             }
-    val views = mutableMapOf(
-        Pair("AppView", ViewInfo("MQX", 0, "icons/logo.svg") { AppView() }) ,
-        Pair("SettingView", ViewInfo("Settings", 1, "icons/settings.svg") { SettingView() }) ,
-    )
-    var currentView by mutableStateOf(views["AppView"]?: views.values.first())
+    val MQ_VIEW = ViewInfo("MQX", 0, "icons/logo.svg") { MqView() }
+    val SETTING_VIEW = ViewInfo("Settings", 1, "icons/settings.svg") { SettingView() }
+    var currentView by mutableStateOf(SETTING_VIEW)
 }

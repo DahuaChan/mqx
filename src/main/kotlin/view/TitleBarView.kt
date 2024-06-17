@@ -30,7 +30,7 @@ fun DecoratedWindowScope.TitleBarView() {
         Row(Modifier.align(Alignment.End)) {
             Tooltip({ Text("Open Setting Dialog") }) {
                 IconButton({
-                    MainVM.currentView = MainVM.views["SettingView"]?: MainVM.views.values.first()
+                    MainVM.currentView = MainVM.SETTING_VIEW
                 }, Modifier.size(40.dp).padding(5.dp)) {
                     Icon(
                         "icons/settings.svg",

@@ -1,7 +1,6 @@
-package view
+package view.mq
 
 import StandaloneSampleIcons
-import androidx.compose.animation.core.spring
 import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -23,7 +22,7 @@ import viewmodel.mq.MqVM
 
 @Composable
 @Preview
-fun AppView() {
+fun MqView() {
     Column(Modifier.trackActivation().fillMaxSize().background(JewelTheme.globalColors.panelBackground)) {
         Row(Modifier.fillMaxWidth().padding(3.dp), Arrangement.spacedBy(5.dp)) {
             Dropdown(Modifier.height(30.dp), menuContent =
